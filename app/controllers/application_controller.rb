@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
   end
 
   def require_login
-    redirect_to new_session_path unless current_user
+    redirect_to '/' unless current_user
   end
 end
