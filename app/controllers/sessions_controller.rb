@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
 
   def create
     session[:name] = params[:name]
+    current_user
     render '/sessions/welcome'
   end
 
