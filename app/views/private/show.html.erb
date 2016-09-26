@@ -1,0 +1,10 @@
+<div style="width: 80%; margin: 0 auto;">
+  <h1>Secret Page: <%= current_user %></h1>
+  <div>
+    
+    <%= form_tag('/destroy') do %>
+      <%= button_tag "Kill Session" %>
+    <% end %>
+
+  </div>
+</div>
