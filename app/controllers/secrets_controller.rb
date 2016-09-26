@@ -1,2 +1,17 @@
-class SecretsController < ActionController::Base
+class SecretsController < ApplicationController
+  before_action :require_login
+
+  def index
+    render :'private/index'
+  end
+
+  def show
+    render :'private/show'
+  end
+
+  private
+
+  def require_login
+    redirect_to root_path if session[:name].blank?
+  end
 end
