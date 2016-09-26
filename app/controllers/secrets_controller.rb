@@ -12,6 +12,6 @@ class SecretsController < ApplicationController
   private
 
   def require_login
-    redirect_to root_path if session[:name].blank?
+    redirect_to login_path if session[:name].blank?
   end
 end
