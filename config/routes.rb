@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   post '/', to: 'sessions#create'
   get '/show', to: 'sessions#show'
-  get 'sessions/destroy'
+  post 'sessions/destroy'
+  get '/secret', to: 'secrets#show'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
