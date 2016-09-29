@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   get '/show', to: 'secrets#show'
   get '/new', to: 'sessions#new'
   post '/new', to: 'sessions#create'
-  get 'logout', to: 'sessions#destroy'
+  post 'logout', to: 'sessions#destroy'
 end
